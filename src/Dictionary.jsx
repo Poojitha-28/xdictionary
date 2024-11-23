@@ -7,10 +7,17 @@ const DictionaryApp = () => {
   const [value, setValue] = useState('');
 
   // Sample dictionary (assuming dicWords is an array of objects with 'word' and 'definition' properties)
-  const dicWords = [
-    { word: 'example', definition: 'a representative form or pattern' },
-    { word: 'react', definition: 'a JavaScript library for building user interfaces' }
+  const dicWords = 
+  [
+  
+      { word: "React", meaning: "A JavaScript library for building user interfaces." },
+  
+      { word: "Component", meaning: "A reusable building block in React." },
+  
+      { word: "State", meaning: "An object that stores data for a component." }
+  
   ];
+  
 
   const SearchFunction = () => {
     let result = dicWords.find(x => x.word === word);
@@ -25,6 +32,7 @@ const DictionaryApp = () => {
     <>
       <h1>Dictionary App</h1>
       <input 
+      type='text'
         placeholder="Search for a word" 
         value={word} // Bind the input value to the state 'word'
         onChange={(e) => setWord(e.target.value)} // Update the state when the input changes
