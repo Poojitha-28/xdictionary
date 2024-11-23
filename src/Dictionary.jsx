@@ -22,7 +22,7 @@ const DictionaryApp = () => {
   const SearchFunction = () => {
     let result = dicWords.find(x => x.word === word);
     if (result) {
-      setValue(result.definition); // Set the definition if found
+      setValue(result.meaning); // Set the definition if found
     } else {
       setValue("Word not found in the dictionary."); // Set not found message
     }
