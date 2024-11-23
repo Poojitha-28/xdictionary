@@ -20,7 +20,7 @@ const DictionaryApp = () => {
   
 
   const SearchFunction = () => {
-    let result = dicWords.find(x => x.word === word);
+    let result = dicWords.find(x => x.word.toLowerCase() === word.toLowerCase());
     if (result) {
       setValue(result.meaning); // Set the definition if found
     } else {
